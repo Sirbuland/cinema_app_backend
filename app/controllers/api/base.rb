@@ -23,7 +23,9 @@ module API
     end
 
     mount API::V1::Catalogs
+    mount API::V1::Movies
     mount API::V1::Users
+    mount API::V1::Ratings
     add_swagger_documentation
   end
 end
