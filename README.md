@@ -25,8 +25,10 @@ bundle exec rake db:create
 bundle exec rake db:migrate
 bundle exec rake db:seed
 ```
+##### 4. Add OMDB API key
+create application.yml and copy and paste content of application.yml.sample in it. then replace value of OMDB_API_KEY with valid API key to fetch the movie information from OMDB
 
-##### 4. Start the Rails server
+##### 5. Start the Rails server
 
 You can start the rails server using the command given below.
 
@@ -34,7 +36,7 @@ You can start the rails server using the command given below.
 bundle exec rails s
 ```
 
-##### 5. Usage instructions
+##### 6. Usage instructions
 
 There are 2 users created for you in the seeds file, with the following credentials:
 
@@ -64,7 +66,7 @@ The Fate of the Furious
 
 I also created one review on all the above mentioned movies with the created customer user.
 
-##### 6. API Documentation
+##### 7. API Documentation
 
 Here is the postman collection which contains all the APIs with parameters.
 https://www.getpostman.com/collections/84f4e1a3d32044966ddf

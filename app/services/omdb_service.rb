@@ -1,6 +1,6 @@
 class OmdbService
-  def initialize(api_key)
-    @client = Omdb::Api::Client.new(api_key: api_key)
+  def initialize
+    @client = Omdb::Api::Client.new(api_key: ENV['OMDB_API_KEY'])
   end
 
   def fetch_by_title(title)

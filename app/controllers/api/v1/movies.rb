@@ -20,7 +20,7 @@ module API
         get 'movie_detail' do
           movie = Movie.find_by(id: params[:id])
           error!({:error_code => 404, :error_message => "Catalog not found"}, 400) if movie.blank?
-          return OmdbService.new('faf8d1e6').fetch_by_title(movie.title)
+          return OmdbService.new.fetch_by_title(movie.title)
         end
       end
 

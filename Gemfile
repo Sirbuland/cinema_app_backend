@@ -53,4 +53,5 @@ gem 'pry', group: :development
 gem 'grape-rabl'
 gem 'omdb-api'
 
+gem 'figaro'
 
