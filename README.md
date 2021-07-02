@@ -1,24 +1,71 @@
-# README
+##### Prerequisites
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The setups steps expect following tools installed on the system.
 
-Things you may want to cover:
+- Github
+- Ruby [2.5.3]
+- Rails [5.2.4]
 
-* Ruby version
+##### 1. Check out the repository
 
-* System dependencies
+```bash
+git clone git@github.com:Sirbuland/cinema_app_backend.git
+```
 
-* Configuration
+##### 2. Create database.yml file
 
-* Database creation
+Change database configuration according to database on your local machine.
 
-* Database initialization
+##### 3. Create and setup the database
 
-* How to run the test suite
+Run the following commands to create and setup the database.
 
-* Services (job queues, cache servers, search engines, etc.)
+```ruby
+bundle exec rake db:create
+bundle exec rake db:migrate
+bundle exec rake db:seed
+```
 
-* Deployment instructions
+##### 4. Start the Rails server
 
-* ...
+You can start the rails server using the command given below.
+
+```ruby
+bundle exec rails s
+```
+
+##### 5. Usage instructions
+
+There are 2 users created for you in the seeds file, with the following credentials:
+
+Internal User:
+```
+Email: john.doe@gmail.com
+Password: 12345678
+```
+
+Customer User:
+```
+Email: john.customer@gmail.com
+Password: 12345678
+```
+
+Following Movies are also created in database:
+```
+The Fast and the Furious
+2 Fast 2 Furious
+The Fast and the Furious: Tokyo Drift
+Fast & Furious
+Fast Five
+Fast & Furious 6
+Furious 7
+The Fate of the Furious
+```
+
+I also created one review on all the above mentioned movies with the created customer user.
+
+##### 6. API Documentation
+
+Here is the postman collection which contains all the APIs with parameters.
+https://www.getpostman.com/collections/84f4e1a3d32044966ddf
+
