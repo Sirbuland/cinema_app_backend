@@ -22,6 +22,7 @@ module API
       end
     end
 
+    mount API::V1::Catalogs
     mount API::V1::Users
     add_swagger_documentation
   end

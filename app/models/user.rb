@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :ratings
   before_save :ensure_authentication_token
 
   enum user_type: [:internal, :customer]
